@@ -1,0 +1,5 @@
+npm install express
+export BUILD_ID=dontKillMePlease
+pm2 start -f app.js
+pm2 stop all
+pm2 start app.js
