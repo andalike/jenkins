@@ -1,4 +1,5 @@
 # jenkins<br/>	  
+# Tested on Ubuntu 20<br/>	  
 <br/>	      
 # Install Java<br/>
 sudo apt-get update<br/>
