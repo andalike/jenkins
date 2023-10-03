@@ -1,0 +1,33 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('os-update') {
+            steps {
+                echo 'Inside os stage'
+                sh "sudo apt-get update"
+            }
+        }
+
+
+        stage('download-code') {
+            steps {
+                git branch : 'main' , url: 'https://github.com/andalike/simple-node-server.git'
+            }
+        }
+
+        stage('install-dependencies') {
+            steps {
+                sh 'npm install'
+            }
+        }
+
+        stage('start-server') {
+            steps {
+                sh 'npm start'
+            }
+        }
+
+    }
+}
